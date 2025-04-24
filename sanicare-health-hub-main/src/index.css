@@ -1,0 +1,122 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 180 80% 98%;
+    --foreground: 195 50% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 195 50% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 50% 15%;
+
+    --primary: 180 100% 34%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 195 50% 95%;
+    --secondary-foreground: 195 50% 15%;
+
+    --muted: 195 10% 90%;
+    --muted-foreground: 195 50% 40%;
+
+    --accent: 210 70% 95%;
+    --accent-foreground: 210 50% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 195 20% 85%;
+    --input: 195 20% 85%;
+    --ring: 180 100% 34%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 195 80% 98%;
+    --sidebar-foreground: 195 50% 15%;
+    --sidebar-primary: 180 100% 34%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 195 50% 95%;
+    --sidebar-accent-foreground: 195 50% 15%;
+    --sidebar-border: 195 20% 85%;
+    --sidebar-ring: 180 100% 34%;
+  }
+
+  .dark {
+    --background: 195 50% 10%;
+    --foreground: 195 10% 95%;
+
+    --card: 195 50% 15%;
+    --card-foreground: 195 10% 95%;
+
+    --popover: 195 50% 15%;
+    --popover-foreground: 195 10% 95%;
+
+    --primary: 180 80% 40%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 195 40% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 195 40% 20%;
+    --muted-foreground: 195 20% 65%;
+
+    --accent: 195 40% 25%;
+    --accent-foreground: 195 10% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 195 40% 25%;
+    --input: 195 40% 25%;
+    --ring: 180 80% 40%;
+
+    --sidebar-background: 195 50% 15%;
+    --sidebar-foreground: 195 10% 95%;
+    --sidebar-primary: 180 80% 40%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 195 40% 20%;
+    --sidebar-accent-foreground: 195 10% 95%;
+    --sidebar-border: 195 40% 25%;
+    --sidebar-ring: 180 80% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .hover-card-effect {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-sanicare-300/20 hover:-translate-y-1;
+  }
+  
+  .pulse-effect {
+    @apply animate-pulse-glow;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-sanicare-600 to-blue-500 inline-block text-transparent bg-clip-text;
+  }
+  
+  .page-transition {
+    @apply animate-fade-in;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-sm border border-white/60 shadow-md;
+  }
+}
